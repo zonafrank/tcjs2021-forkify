@@ -1,0 +1,32 @@
+{
+  "name": "tcjs2021-forkify",
+  "version": "1.0.0",
+  "description": "The complete javascript forkify project",
+  "source": "index.html",
+  "scripts": {
+    "start": "parcel",
+    "build": "parcel build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zonafrank/tcjs2021-forkify.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zonafrank/tcjs2021-forkify/issues"
+  },
+  "homepage": "https://github.com/zonafrank/tcjs2021-forkify#readme",
+  "devDependencies": {
+    "@parcel/transformer-image": "^2.0.0-rc.0",
+    "@parcel/transformer-sass": "^2.0.0-rc.0",
+    "core-js": "^3.18.2",
+    "parcel": "^2.0.0-rc.0",
+    "regenerator-runtime": "^0.13.9"
+  },
+  "dependencies": {
+    "fractional": "^1.0.0"
+  }
+}
