@@ -12,6 +12,7 @@ import searchView from "./views/searchView";
 const controlRecipe = async function () {
   const id = window.location.hash.slice(1);
   if (!id) return;
+
   try {
     recipeView.renderSpinner();
     resultsView.update(model.getSearchResultsPage());
