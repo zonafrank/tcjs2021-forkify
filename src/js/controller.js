@@ -4,7 +4,7 @@ import { MODAL_CLOSE_SEC } from "./config";
 import * as model from "./model";
 import addRecipeView from "./views/addRecipeView";
 import bookmarksView from "./views/bookmarksView";
-import paginationView from "./views/paginationView";
+// import paginationView from "./views/paginationView";
 import recipeView from "./views/recipeView";
 import resultsView from "./views/resultsView";
 import searchView from "./views/searchView";
@@ -61,7 +61,7 @@ const controlServings = function (servings) {
 
 const controlPagination = function (pageVal) {
   resultsView.render(model.getSearchResultsPage(pageVal));
-  paginationView.render(model.state.search);
+  // paginationView.render(model.state.search);
 };
 
 const controlAddBookmark = function () {
@@ -105,7 +105,7 @@ const init = function () {
   recipeView.addHandlerUpdateServings(controlServings);
   recipeView.addHandlerAddBookmark(controlAddBookmark);
   searchView.addHandlerSearch(controlSearchResult);
-  paginationView.addHandlerPagination(controlPagination);
+  // paginationView.addHandlerPagination(controlPagination);
 };
 
 init();
