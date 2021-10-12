@@ -105,7 +105,7 @@ const init = function () {
   recipeView.addHandlerUpdateServings(controlServings);
   recipeView.addHandlerAddBookmark(controlAddBookmark);
   searchView.addHandlerSearch(controlSearchResult);
-  // paginationView.addHandlerPagination(controlPagination);
+  paginationView.addHandlerPagination(controlPagination);
 };
 
 init();
