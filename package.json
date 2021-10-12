@@ -25,7 +25,6 @@
     "parcel": "^2.0.0-rc.0"
   },
   "dependencies": {
-    "fractional": "^1.0.0",
     "core-js": "^3.18.2",
     "regenerator-runtime": "^0.13.9"
   }
