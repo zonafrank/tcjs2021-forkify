@@ -5,7 +5,11 @@ export default class View {
   _errorMessage = "🔥 Oops! Something went wrong. 🔥";
   _message = "";
   _markup = "";
-
+  /**
+   *
+   * @param {Object | Object[]} data The data to be rendered
+   * @returns {undefined}
+   */
   render(data) {
     if (!data || (Array.isArray(data) && data.length === 0)) {
       return this.renderError();
@@ -57,6 +61,7 @@ export default class View {
   }
 
   renderError(message = this._errorMessage) {
+    const previousMarkup = this._parentElement.innerHTML;
     this._markup = `
       <div class="error">
             <div>
@@ -68,6 +73,10 @@ export default class View {
           </div> 
     `;
     this._reRender();
+    setTimeout(() => {
+      this._markup = previousMarkup;
+      this._reRender();
+    }, 3000);
   }
 
   renderMessage(message = this._message) {
