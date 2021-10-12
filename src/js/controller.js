@@ -3,7 +3,7 @@ import "regenerator-runtime/runtime";
 import { MODAL_CLOSE_SEC } from "./config";
 import * as model from "./model";
 import addRecipeView from "./views/addRecipeView";
-import bookmarksView from "./views/bookmarksView";
+// import bookmarksView from "./views/bookmarksView";
 // import paginationView from "./views/paginationView";
 import recipeView from "./views/recipeView";
 import resultsView from "./views/resultsView";
@@ -18,7 +18,7 @@ const controlRecipe = async function () {
   try {
     recipeView.renderSpinner();
     resultsView.update(model.getSearchResultsPage());
-    bookmarksView.update(model.state.bookmarks);
+    // bookmarksView.update(model.state.bookmarks);
 
     await model.loadRecipe(id);
     // 02. Rendering recipe
@@ -72,11 +72,11 @@ const controlAddBookmark = function () {
   }
 
   recipeView.update(model.state.recipe);
-  bookmarksView.render(model.state.bookmarks);
+  // bookmarksView.render(model.state.bookmarks);
 };
 
 const controlBookmarks = function () {
-  bookmarksView.render(model.state.bookmarks);
+  // bookmarksView.render(model.state.bookmarks);
 };
 
 const controlAddRecipe = async function (newRecipe) {
@@ -86,7 +86,7 @@ const controlAddRecipe = async function (newRecipe) {
     await model.uploadRecipe(newRecipe);
     recipeView.render(model.state.recipe);
     addRecipeView.renderMessage();
-    bookmarksView.render(model.state.bookmarks);
+    // bookmarksView.render(model.state.bookmarks);
     window.history.pushState(null, null, `${model.state.recipe.id}`);
 
     setTimeout(() => {
@@ -100,7 +100,7 @@ const controlAddRecipe = async function (newRecipe) {
 
 const init = function () {
   addRecipeView.addHandlerUpload(controlAddRecipe);
-  bookmarksView.addHandlerRender(controlBookmarks);
+  // bookmarksView.addHandlerRender(controlBookmarks);
   recipeView.addHandlerRender(controlRecipe);
   recipeView.addHandlerUpdateServings(controlServings);
   recipeView.addHandlerAddBookmark(controlAddBookmark);
