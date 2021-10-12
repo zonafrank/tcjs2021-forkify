@@ -86,7 +86,7 @@ const Fraction = function (numerator, denominator) {
     }
     /* single-argument invocation */
   } else if (typeof denominator === "undefined") {
-    num = numerator; // swap variable names for legibility
+    var num = numerator; // swap variable names for legibility
     if (typeof num === "number") {
       // just a straight number init
       this.numerator = num;
